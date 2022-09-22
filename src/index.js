@@ -4,6 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//firebase
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDURXFBCbyDrSG1wrafs6nI_fIEYnnmAxA",
+  authDomain: "bhavipath-4f52f.firebaseapp.com",
+  projectId: "bhavipath-4f52f",
+  storageBucket: "bhavipath-4f52f.appspot.com",
+  messagingSenderId: "560209119745",
+  appId: "1:560209119745:web:1c65d9ccb03c33278b4e00"
+};
+export const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

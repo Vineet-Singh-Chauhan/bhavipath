@@ -1,0 +1,35 @@
+.example-appear {
+    opacity: 0.01;
+  }
+  
+  .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
+
+  /* .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .bloc-logo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  .bloc-logo canvas {
+    width: 100%;
+    height: 100vh;
+  }
+  .logo-mask {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-size: contain;
+    background-image: url("/image.png");
+  } */
