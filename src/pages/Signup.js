@@ -3,6 +3,9 @@ import { useState } from 'react';
 //firebase
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
+//router
+import { useNavigate } from "react-router-dom"
+
 
 
 //data

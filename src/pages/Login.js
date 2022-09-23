@@ -44,6 +44,7 @@ export default function Login() {
         e.preventDefault();
         const email = document.getElementById("email-address").value;
         const password = document.getElementById("password").value;
+        
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
@@ -78,7 +79,7 @@ export default function Login() {
                         linkName="Signup"
                         linkUrl="/signup"
                     />
-                    <form className="mt-8 space-y-6 mx-3">
+                    <form className="mt-8 space-y-6 mx-3" onSubmit={handleSubmit}>
                         <div className="mt-8 space-y-px ">
                             {
                                 fields.map(field =>
