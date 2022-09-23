@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect ,useContext} from "react";
 
+import {AuthContext} from "./contexts/AuthContext"
 
 import {
   BrowserRouter,
@@ -44,6 +45,12 @@ function App() {
     AOS.refresh();
   }, []);
 
+  //context
+  const {currentUser} = useContext(AuthContext)
+  const RequireAuth = ({children})=>{
+    return  currentUser ? children :<Navigate to="/login"/>;
+  }
+
 
   return (
     <div className="bg-gradient-to-b from-[#001039] #0109d1 via-[#189bff10] to-[#0109d120]">
@@ -55,7 +62,8 @@ function App() {
           <Route path="/" element={<LandingPage />}/>
           <Route path="/login" element={<LoginPage/>} />
           <Route path="/signup" element={<SignupPage/>} />
-          <Route path="/test" element={<Testpage/>} />
+          {/* <Route path="/test" element={<Testpage/>} /> */}
+          <Route path="/test" element={<RequireAuth><Testpage/></RequireAuth>} />
           <Route path="/Contact" element={<Contact/>} />
           <Route path="/About" element={<Aboutuspage/>} />
           <Route path="/engineering" element={<Engineering/>} />

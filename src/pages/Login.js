@@ -1,4 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+
+//router
+import { useNavigate } from "react-router-dom"
+
+//
 
 //firebase 
 import { auth } from "../index"
@@ -16,14 +21,21 @@ import Footer from '../components/common/Footer';
 import Navbar from '../components/common/Navbar';
 
 
+import { AuthContext } from '../contexts/AuthContext.js';
 const fields = loginFields;
 // // firebase
 
+
+// export const username = '';
 let fieldsState = {};
 fields.forEach(field => fieldsState[field.id] = '');
 // alert("sre")
 export default function Login() {
 
+    const navigate = useNavigate();
+    
+    //context
+    const { dispatch } = useContext(AuthContext);
 
     const [loginState, setLoginState] = useState(fieldsState);
 
@@ -44,12 +56,17 @@ export default function Login() {
         e.preventDefault();
         const email = document.getElementById("email-address").value;
         const password = document.getElementById("password").value;
-        
+
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
+                const user1 = userCredential.user;
+                alert(user1)
                 const user = userCredential.user;
-                alert(user)
+                localStorage.setItem('user',user)
+                console.log(user.email)
+                dispatch({ type: "LOGIN", payload: user })
+                navigate("/test")
                 // ...
             })
             .catch((error) => {
@@ -69,9 +86,9 @@ export default function Login() {
 
     return (
         <div>
-            <Navbar/>
+            <Navbar />
 
-            <div className='h-screen flex justify-center items-center'>
+            <div data-aos="fade-zoom-in" className='my-10  flex justify-center items-center'>
                 <div>
                     <Header
                         heading="Login to your account"
@@ -108,7 +125,7 @@ export default function Login() {
                 </div>
 
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React ,{useState}from 'react'
+import React, { useState } from 'react'
 
 
 //data
@@ -21,84 +21,84 @@ import QuestionDiv from '../components/test/QuestionDiv';
 
 const reference = {
   '111': {
-    careerS:'Full Stack Developer',
+    careerS: 'Full Stack Developer',
     Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
   },
   '110': {
-    careerS:'Programing',
+    careerS: 'Programing',
     Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
   },
   '101': {
-    careerS:'Design',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
-  } ,
-  '011': {
-    careerS:'Developer',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
-  } ,
-  '001': {
-    careerS:'Design',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
-  }  ,
-  '010':  {
-    careerS:'Developer',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
-  } ,
-  '100': {
-    careerS:'Programing',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
-  }  ,
-  '000': {
-    careerS:'Inconfident',
+    careerS: 'Design',
     Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
   },
-  
+  '011': {
+    careerS: 'Developer',
+    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+  },
+  '001': {
+    careerS: 'Design',
+    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+  },
+  '010': {
+    careerS: 'Developer',
+    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+  },
+  '100': {
+    careerS: 'Programing',
+    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+  },
+  '000': {
+    careerS: 'Inconfident',
+    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+  },
+
 }
-  
+
 
 const Testpage = () => {
-  
-const handletest = (e) => {
-  e.preventDefault();
-  let str='';
-  
-  const inputs =  Array.from(e.target.parentElement.querySelectorAll("input"));
-  inputs.forEach(e=>{
-    if(e.checked){
-      str+=e.value;
+
+  const handletest = (e) => {
+    e.preventDefault();
+    let str = '';
+
+    const inputs = Array.from(e.target.parentElement.querySelectorAll("input"));
+    inputs.forEach(e => {
+      if (e.checked) {
+        str += e.value;
+      }
+    })
+    if (str.length !== 3) {
+      alert('Please answer all questions !')
+    } else {
+
+
+      setCareer(reference[str].careerS);
+      setCareerDesc(reference[str].Desc);
+      document.getElementById("testRes").classList.remove('hidden');
+      document.getElementById("testRes").classList.add('flex');
+      e.target.parentElement.querySelector("form").reset();
+
     }
-  })
-  if(str.length!==3){
-    alert('Please answer all questions !')
-  }else{
-    
-    
-    setCareer(reference[str].careerS);
-    setCareerDesc(reference[str].Desc);
-    document.getElementById("testRes").classList.remove('hidden');
-    document.getElementById("testRes").classList.add('flex');
-    e.target.parentElement.querySelector("form").reset();
-   
+
+
+
   }
-  
-
-
-}
-const [career,setCareer] = useState('')
-const [careerDesc,setCareerDesc] = useState('')
+  const [career, setCareer] = useState('')
+  const [careerDesc, setCareerDesc] = useState('')
 
   return (
     <div>
       <Navbar />
 
-      <div className='text-white font-semibold text-4xl md:text-6xl text-center my-5'>
+      <div data-aos="fade-zoom-in" className='text-white font-semibold text-4xl md:text-6xl text-center my-5'>
         Trusted Carrier Suggestion
       </div>
-      <div className='text-white/50 text-xl md:text-2xl text-center my-10'>
+      <div  data-aos="fade-zoom-in" className='text-white/50 text-xl md:text-2xl text-center my-10'>
         Know yourself better through Our test <br /> And choose you path accordingly
       </div>
 
-      <div className='flex text-center justify-around items center flex-wrap w-[90%] mx-auto my-10 gap-y-5 '>
+      <div data-aos="fade-zoom-in" className='flex text-center justify-around items center flex-wrap w-[90%] mx-auto my-10 gap-y-5 '>
 
 
         <div className="w-full max-w-xs  rounded-lg border  shadow-md bg-gray-800 border-gray-700">
@@ -138,9 +138,9 @@ const [careerDesc,setCareerDesc] = useState('')
 
       {/* <hr className='my-5 border-white/20'/> */}
 
-      <form onSubmit={handletest} className="test relative items-center  bg-[#1f2937]/60 backdrop-blur-lg py-10 border-t-[0.5px] border-t-white/20 ">
+      <form data-aos="fade-zoom-in"  onSubmit={handletest} className="test relative items-center  bg-[#1f2937]/60 backdrop-blur-sm py-10 border-t-[0.5px] border-t-white/20 ">
 
-      <Modal career={career} desc={careerDesc}/>
+        <Modal career={career} desc={careerDesc} />
         <h1 className='text-white font-semibold text-4xl text-center my-10 '>Questionaire</h1>
         <hr className='my-5 mx-10 border-white/20' />
 

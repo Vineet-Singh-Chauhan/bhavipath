@@ -12,7 +12,7 @@ import { engineeringOpt } from "../../../datasource/careerOption"
 
 function Engineering() {
     return (
-        <div>
+        <div data-aos="fade-zoom-in">
             <Navbar/>
             <h1 className=" p-8 m-8 text-center mb-4 text-3xl font-extrabold  text-white md:text-5xl lg:text-6xl"><span className="text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-orange-400">Engineering</span></h1>
 

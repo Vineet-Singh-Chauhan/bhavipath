@@ -14,7 +14,7 @@ import Features from "../components/pages/landingPage/Features";
 import Aboutus from "../components/pages/landingPage/Aboutus";
 import Corousel from '../components/pages/landingPage/Corousel';
 import Scourosel from '../components/pages/landingPage/Scourosel'
-
+import AppAdd from "../components/common/AppAdd"
 //
 
 const LandingPage = () => {
@@ -33,6 +33,7 @@ const LandingPage = () => {
       </div>
       <DiscTest />
       {/* <TestPage /> */}
+      <AppAdd/>
       <Aboutus />
       <Footer />
     </>

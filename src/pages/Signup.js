@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 //router
-import { useNavigate } from "react-router-dom"
+import { Navigate, useNavigate } from "react-router-dom"
 
-
+//sweetalert
+import swal from 'sweetalert';
 
 //data
 import { signupFields } from "../datasource/loginpageData"
@@ -33,7 +34,7 @@ export default function Signup() {
         e.preventDefault();
         const email = document.getElementById("email-address").value;
         const password = document.getElementById("password").value;
-        console.log(signupState)
+        // console.log(signupState)
         
     
 
@@ -43,6 +44,8 @@ export default function Signup() {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        swal("Registered !", "Please Login to continue", "success").then( <Navigate to="/login"/>);
+       
         
         // ...
       })
@@ -51,7 +54,7 @@ export default function Signup() {
         const errorMessage = error.message;
         alert(errorMessage);
         // ..
-      });
+      })
     
     }
 
@@ -61,7 +64,7 @@ export default function Signup() {
     }
 
     return (
-        <div>
+        <div data-aos="fade-zoom-in">
             <Navbar/>
         <div className='h-screen flex justify-center items-center'>
             

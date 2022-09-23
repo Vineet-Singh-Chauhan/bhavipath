@@ -13,7 +13,7 @@ const Exams = () => {
     <div>
         <Navbar/>
 
-            <div>
+            <div data-aos="fade-zoom-in">
                 <h1 className=" p-8  text-center mb-4 text-3xl font-bold  text-white md:text-5xl lg:text-6xl"><span className="text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-orange-400">Exams</span></h1>
                 <h1 className="text-center mb-4 text-3xl  tracking-tight leading-none  md:text-4xl lg:text-5xl text-white">Hey there! </h1>
                 <p className="text-center  mb-6 text-lg font-normal  lg:text-xl sm:px-16 xl:px-48 text-gray-400">roadmap.sh is a community effort to create roadmaps, guides and other educational content to help guide the developers in picking up the path and guide their learnings.</p>

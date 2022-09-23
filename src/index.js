@@ -7,8 +7,11 @@ import reportWebVitals from './reportWebVitals';
 //firebase
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 
+//context
+import {AuthContextProvider} from "./contexts/AuthContext"
 const firebaseConfig = {
   apiKey: "AIzaSyDURXFBCbyDrSG1wrafs6nI_fIEYnnmAxA",
   authDomain: "bhavipath-4f52f.firebaseapp.com",
@@ -19,12 +22,15 @@ const firebaseConfig = {
 };
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const db = getFirestore(app);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <AuthContextProvider>
     <App />
+    </AuthContextProvider>
   </React.StrictMode>
 );
 

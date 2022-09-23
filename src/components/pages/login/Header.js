@@ -14,7 +14,7 @@ export default function Header({
             <div className="flex justify-center">
                 <img 
                     alt=""
-                    className=" mt-10 h-14 "
+                    className="  h-14 "
                     src={logoB}/>
             </div>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-white/90">

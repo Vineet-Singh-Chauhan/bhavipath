@@ -32,14 +32,12 @@ const TestAPI = () => {
       // Endpoint to send files
       // url: "https://dummy.restapiexample.com/api/v1/create",
       url: "https://api.sentino.org/score/facts",
-      method: "POST",
+      method: "PUT",
       headers: {
 
         // Add any auth token here
-        'Access-Control-Allow-Origin': '* @ Chrome Web Store',
-        "Access-Control-Allow-Headers":"*",
-  
-
+        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Headers":"GET,PUT,POST,DELETE,PATCH,OPTIONS",
         'Content-Type': 'application/json',
         Authorization: '20a68644f5b415b9728b1222b510e50769360480',
       },

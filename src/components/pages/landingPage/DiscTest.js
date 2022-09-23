@@ -3,7 +3,7 @@ import React from 'react'
 const DiscTest = () => {
     return (
         <div className='my-5 flex flex-col lg:flex-row w-[90%] mx-auto gap-5'>
-            <div className='flex-1 flex flex-col justify-center text-center lg:text-start'>
+            <div data-aos="fade-zoom-in"  className='flex-1 flex flex-col justify-center text-center lg:text-start'>
                 <div className='font-bold text-4xl sm:text-5xl md:text-6xl text-white my-5'>
                     The DISC personality Test
                 </div>
@@ -11,7 +11,7 @@ const DiscTest = () => {
                     A modern interpretation of Dr. William Marston's behavioral dimensions, this personal strengths profile uncovers four quadrants of behavioral patterns. With the insight from DISC, it will be easier for you to recognize the right opportunities to achieve the results you desire.
                 </div>
             </div>
-            <div className='flex-1'>
+            <div data-aos="fade-zoom-in" className='flex-1'>
 
                 <div className="grid mb-8 rounded-lg border  shadow-sm border-gray-700 md:mb-12 md:grid-cols-2">
                     <figure className="flex flex-col justify-center items-center p-5 md:p-8 text-center  rounded-t-lg border-b md:rounded-t-none md:rounded-tl-lg md:border-r bg-gray-800 border-gray-700">
