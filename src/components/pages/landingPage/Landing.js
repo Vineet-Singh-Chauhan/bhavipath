@@ -25,7 +25,7 @@ const Landing = () => {
         <img src={logoB} alt='Logo' className='h-[5rem]   '/>
 
         </div> */}
-        <Link to='/test'>
+        <Link to='/test'> 
 
                 <div data-aos={"fade-zoom-in"} className="toolTip w-fit  md:w-fit bg-[#ffffff10] hover:bg-[#ffffff20] border-1 mx-auto rounded-full py-2 text-white/70 px-10 cursor-pointer text-[0.5rem] sm:text-base ">
                     Take right career path &nbsp; | <span className='bg-clip-text font-semibold text-transparent bg-gradient-to-r from-pink-500 to-violet-300 mx-2'>Take test <i className="bi bi-arrow-right ml-1"></i> </span>
