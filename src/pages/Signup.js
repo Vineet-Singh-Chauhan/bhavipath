@@ -13,6 +13,8 @@ import Header from "../components/pages/login/Header"
 import Input from "../components/pages/login/Input";
 import FormAction from "../components/pages/login/FormAction";
 import FormExtra from "../components/pages/login/FormExtra";
+import Footer from '../components/common/Footer';
+import Navbar from '../components/common/Navbar';
 
 const fields = signupFields;
 let fieldsState = {};
@@ -56,6 +58,8 @@ export default function Signup() {
     }
 
     return (
+        <div>
+            <Navbar/>
         <div className='h-screen flex justify-center items-center'>
             
         <div>
@@ -66,7 +70,7 @@ export default function Signup() {
                 linkUrl="/login"
             />
 
-            <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+            <form className="mt-8 space-y-6 mx-3" onSubmit={handleSubmit}>
                 <div className="">
                     {
                         fields.map(field =>
@@ -92,6 +96,8 @@ export default function Signup() {
 
             </form>
         </div>
+        </div>
+        <Footer/>
         </div>
     )
 }

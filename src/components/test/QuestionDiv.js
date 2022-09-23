@@ -6,10 +6,10 @@ const QuestionDiv = (props) => {
           <div className='text-xl md:text-2xl question  '>{props.question}</div>
           <div className='my-3 ml-3'>
             <div className=' relative'>
-              <input  name={props.id} type="radio" value="true" id={props.idtrue} className='accent-green-500 mr-1' />
+              <input  name={props.id} type="radio" value={1} id={props.idtrue} className='accent-green-500 mr-1' />
               <label htmlFor={props.idtrue}>Yes</label>
            
-              <input name={props.id} type="radio" value="false" id={props.idfalse} className='accent-red-500 ml-5 mr-1' />
+              <input name={props.id} type="radio" value={0} id={props.idfalse} className='accent-red-500 ml-5 mr-1' />
               <label htmlFor={props.idfalse}>No</label>
             </div>
               

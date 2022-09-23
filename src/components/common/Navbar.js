@@ -26,7 +26,39 @@ import { Link } from 'react-router-dom';
 
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = [
+  {
+    id:'1',
+    page:'Home',
+    link:'/',
+    name:'Home'
+  },
+  {
+    id:'2',
+    page:'About',
+    link:'/about',
+    name:'About'
+  },
+  {
+    id:'3',
+    page:'Contact',
+    link:'/contact',
+    name:'Contact'
+  },
+  {
+    id:'4',
+    page:'Login',
+    link:'/login',
+    name:'Login'
+  },
+  {
+    id:'5',
+    page:'App',
+    link:'app',
+    name:'Get App'
+  }
+
+];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -43,20 +75,20 @@ function DrawerAppBar(props) {
           <Link to="/">
             <div className="flex items-center justify-center">
               <img src={logoB} className="mr-3 h-8" alt="Bhavipath Logo" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Bhavipath</span>
+              <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Bhavipath</span>
             </div>
           </Link>
         </Typography>
         <Divider />
         <List>
           {navItems.map((item) => (
-              <Link key={item+'1'} to={item=="Home"?"/":item}>
-            <ListItem  disablePadding>
-              <ListItemButton sx={{ textAlign: 'center' }}>
-                <ListItemText primary={item} />
-              </ListItemButton>
-            </ListItem>
-              </Link>
+            <Link key={item.id} to={item.link}>
+              <ListItem disablePadding>
+                <ListItemButton sx={{ textAlign: 'center' }}>
+                  <ListItemText primary={item.name} />
+                </ListItemButton>
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Box>
@@ -85,18 +117,18 @@ function DrawerAppBar(props) {
               sx={{ flexGrow: { xs: 0, sm: 1 }, justifyContent: 'end', display: { xs: 'block', sm: 'block' }, marginLeft: { xs: 'auto' } }}
             >
               <Link to="/">
-              <div href="/" className="flex items-center">
-                <img src={logoB} className="mr-3 h-8" alt="FlowBite Logo" />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Bhavipath</span>
-              </div>
+                <div href="/" className="flex items-center">
+                  <img src={logoB} className="mr-3 h-8" alt="FlowBite Logo" />
+                  <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Bhavipath</span>
+                </div>
               </Link>
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (
-                <Link  key={item+'2'} to={item=="Home"?"/":item}>
-                <Button sx={{ color: '#fff' }}>
-                  {item}
-                </Button>
+                <Link key={item.id+'1'} to={item.link}>
+                  <Button sx={{ color: '#fff' }}>
+                    {item.name}
+                  </Button>
                 </Link>
               ))}
             </Box>

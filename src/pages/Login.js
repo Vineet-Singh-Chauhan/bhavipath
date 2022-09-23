@@ -12,6 +12,8 @@ import Header from "../components/pages/login/Header"
 import Input from "../components/pages/login/Input";
 import FormAction from "../components/pages/login/FormAction";
 import FormExtra from "../components/pages/login/FormExtra";
+import Footer from '../components/common/Footer';
+import Navbar from '../components/common/Navbar';
 
 
 const fields = loginFields;
@@ -65,42 +67,47 @@ export default function Login() {
     }
 
     return (
-        <div className='h-screen flex justify-center items-center'>
-            <div>
-                <Header
-                    heading="Login to your account"
-                    paragraph="Don't have an account yet? "
-                    linkName="Signup"
-                    linkUrl="/signup"
-                />
-                <form className="mt-8 space-y-6">
-                    <div className="mt-8 space-y-px">
-                        {
-                            fields.map(field =>
-                                <Input
-                                    key={field.id}
-                                    handleChange={handleChange}
-                                    value={loginState[field.id]}
-                                    labelText={field.labelText}
-                                    labelFor={field.labelFor}
-                                    id={field.id}
-                                    name={field.name}
-                                    type={field.type}
-                                    isRequired={field.isRequired}
-                                    placeholder={field.placeholder}
-                                />
+        <div>
+            <Navbar/>
 
-                            )
-                        }
-                    </div>
+            <div className='h-screen flex justify-center items-center'>
+                <div>
+                    <Header
+                        heading="Login to your account"
+                        paragraph="Don't have an account yet? "
+                        linkName="Signup"
+                        linkUrl="/signup"
+                    />
+                    <form className="mt-8 space-y-6 mx-3">
+                        <div className="mt-8 space-y-px ">
+                            {
+                                fields.map(field =>
+                                    <Input
+                                        key={field.id}
+                                        handleChange={handleChange}
+                                        value={loginState[field.id]}
+                                        labelText={field.labelText}
+                                        labelFor={field.labelFor}
+                                        id={field.id}
+                                        name={field.name}
+                                        type={field.type}
+                                        isRequired={field.isRequired}
+                                        placeholder={field.placeholder}
+                                    />
 
-                    <FormAction handleSubmit={handleSubmit} text="Login" />
+                                )
+                            }
+                        </div>
+
+                        <FormAction handleSubmit={handleSubmit} text="Login" />
 
 
 
-                </form>
+                    </form>
+                </div>
+
             </div>
-
+            <Footer/>
         </div>
     )
 }

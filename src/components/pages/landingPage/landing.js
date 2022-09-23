@@ -25,16 +25,19 @@ const Landing = () => {
         <img src={logoB} alt='Logo' className='h-[5rem]   '/>
 
         </div> */}
+        <Link to='/test'>
+
                 <div data-aos={"fade-zoom-in"} className="toolTip w-fit  md:w-fit bg-[#ffffff10] hover:bg-[#ffffff20] border-1 mx-auto rounded-full py-2 text-white/70 px-10 cursor-pointer text-[0.5rem] sm:text-base ">
-                    Take right career path &nbsp; | <span className='bg-clip-text font-semibold text-transparent bg-gradient-to-r from-pink-500 to-violet-300 mx-2'>Read More <i className="bi bi-arrow-right ml-1"></i> </span>
+                    Take right career path &nbsp; | <span className='bg-clip-text font-semibold text-transparent bg-gradient-to-r from-pink-500 to-violet-300 mx-2'>Take test <i className="bi bi-arrow-right ml-1"></i> </span>
                 </div>
+        </Link>
 
                 <div data-aos="fade-zoom-in" className='font-bold text-4xl sm:text-5xl md:text-6xl text-white text-center w-[90%] md:w-2/3 mx-auto my-10'>
                     Clear your confusions regarding career choice
                 </div>
                 <div data-aos="fade-zoom-in" className='w-[90%] md:w-2/3 mx-auto text-xl sm:text-2xl text-white/50 text-center'>Bhavipath helps streamline career choice, sprints, tasks, and roadmap tracking. It’s built for high-accuracy personality test.</div>
                 <div data-aos="fade-zoom-in" className=''>
-                    <Link to="/login">
+                    <Link to="/test">
                         <button onMouseEnter={handleHover} className="  px-5 py-3 text-white bg-gradient-to-r   from-[#DA4453] to-[#89216B] transition  ease-out hover:ease-linear hover:bg-gradient-to-l rounded-sm my-10 text-2xl font-semibold ">Take our test <i className={`${btnhover && "translate-x-20"} bi bi-arrow-right ml-1 `}></i></button>
                     </Link>
                 </div>

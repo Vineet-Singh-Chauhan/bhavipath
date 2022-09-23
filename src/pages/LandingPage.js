@@ -9,19 +9,31 @@ import Footer from "../components/common/Footer";
 import Landing from '../components/pages/landingPage/Landing';
 import DiscTest from "../components/pages/landingPage/DiscTest";
 import Cta from "../components/pages/landingPage/Cta";
-import TestPage from "../components/pages/TestPage";
-import Testform from "../components/pages/TestPage";
-import Contactus from "../components/pages/contact/Contactus";
+import Guidance from "../components/pages/landingPage/Guidance";
+import Features from "../components/pages/landingPage/Features";
+import Aboutus from "../components/pages/landingPage/Aboutus";
+import Corousel from '../components/pages/landingPage/Corousel';
+import Scourosel from '../components/pages/landingPage/Scourosel'
 
+//
 
 const LandingPage = () => {
   return (
     <>
       <Navbar />
       <Landing />
-      <Cta />
+      {/* <Scourosel/> */}
+      {/* <Corousel/> */}
+      {/* <Features/> */}
+      
+      <Guidance />
+
+      <div className='my-36'>
+        <Cta />
+      </div>
       <DiscTest />
-      <TestPage />
+      {/* <TestPage /> */}
+      <Aboutus />
       <Footer />
     </>
   )

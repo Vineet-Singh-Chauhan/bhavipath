@@ -18,7 +18,7 @@ const Cta = () => {
           </div>
           <div className=''>
           <div data-aos="fade-zoom-in" className=''>
-          <Link to="/login">
+          <Link to="/test">
             <button  className="  px-5 py-3 text-white bg-black transition duration-150 ease-out hover:bg-white/90 hover:text-black  rounded-sm my-10 text-2xl font-semibold ">Take our test <i className={` bi bi-arrow-right ml-1 `}></i></button>
             </Link>
         </div>
