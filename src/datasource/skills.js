@@ -25,7 +25,7 @@ export const skills = [
     },
     {
         id:4,
-        link:'/law',
+        link:'https://www.geeksforgeeks.org/complete-roadmap-to-learn-dsa-from-scratch/',
         subject:'CP',
         startGrad:'from-[#FFAFBD]',
         endGrad:'to-[#ffc3a0]',

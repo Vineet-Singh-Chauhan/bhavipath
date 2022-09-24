@@ -1,6 +1,32 @@
 import React from 'react'
 
 import axios from "axios";
+import { Service  } from 'axios-middleware';
+const service = new Service(axios);
+
+
+// response = requests.get('http://Authorization: Token 20a68644f5b415b9728b1222b510e50769360480')
+
+// service.register({
+//   onRequest(config) {
+//     console.log('onRequest');
+//     return config;
+//   },
+//   onSync(promise) {
+//     console.log('onSync');
+//     return promise;
+//   },
+//   onResponse(response) {
+//     console.log('onResponse');
+//     return response;
+//   }
+// });
+
+// console.log('Ready to fetch.');
+
+// // Just use axios like you would normally.
+// axios('https://jsonplaceholder.typicode.com/posts/1')
+//   .then(({ data }) => console.log('Received:', data));
 
 let inputjson = {};
 
@@ -8,6 +34,27 @@ const TestAPI = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // service.register({
+    //   onRequest(config) {
+    //     console.log('onRequest');
+    //     return config;
+    //   },
+    //   onSync(promise) {
+    //     console.log('onSync');
+    //     return promise;
+    //   },
+    //   onResponse(response) {
+    //     console.log('onResponse');
+    //     return response;
+    //   }
+    // });
+    
+    // console.log('Ready to fetch.');
+    
+    // // Just use axios like you would normally.
+    // axios('https://jsonplaceholder.typicode.com/posts/1')
+    //   .then(({ data }) => console.log('Received:', data));
+    
     let msg = document.getElementById("message").value;
     inputjson = {
 
@@ -26,26 +73,38 @@ const TestAPI = () => {
 
     }
     // axios.post('https://jsonplaceholder.typicode.com/todos/1');
+    // axios.post('https://api.sentino.org/score/facts',inputjson);
 
     axios({
 
       // Endpoint to send files
       // url: "https://dummy.restapiexample.com/api/v1/create",
       url: "https://api.sentino.org/score/facts",
-      method: "PUT",
+      method: "POST",
       headers: {
 
         // Add any auth token here
         'Access-Control-Allow-Origin': '*',
-        "Access-Control-Allow-Headers":"GET,PUT,POST,DELETE,PATCH,OPTIONS",
-        'Content-Type': 'application/json',
-        Authorization: '20a68644f5b415b9728b1222b510e50769360480',
+        "Access-Control-Allow-Headers":"*",
+        // 'Content-Type': 'application/json',
+        'Authorization':'Token 20a68644f5b415b9728b1222b510e50769360480',
       },
 
       // Attaching the form data
       data: JSON.stringify(inputjson),
     })// Handle the response from backend here
-      .then((res) => {
+    axios({
+      url: "https://api.sentino.org/score/facts",
+      method: "GET",
+      headers: {
+
+        // Add any auth token here
+        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Headers":"*",
+        // 'Content-Type': 'application/json',
+        'Authorization':'20a68644f5b415b9728b1222b510e50769360480',
+      },}
+    ).then((res) => {
         console.log(res)
       })
 

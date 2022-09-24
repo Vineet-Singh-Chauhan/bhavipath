@@ -22,38 +22,38 @@ import QuestionDiv from '../components/test/QuestionDiv';
 const reference = {
   '111': {
     careerS: 'Full Stack Developer',
-    link:'',
+    link:'https://roadmap.sh/',
     Desc: 'You have both the capacity to develop both client-side and server-side software. Consider choosing a profession as a full stack developer.'
   },
   '110': {
     careerS: 'Programming',
-    link:'',
+    link:'https://www.geeksforgeeks.org/complete-roadmap-to-learn-dsa-from-scratch/',
     Desc: 'You possess a logical mind that can debug the algorithms to solve all programming issues and create error-free systems.    '
   },
   '101': {
     careerS: 'Design',
-    link:'',
+    link:'https://en.m.wikipedia.org/wiki/Graphic_design',
     Desc: 'You have the option to pursue a line of work in graphic design. You have the potential to creatively visualize color schemes, pattern combinations, and geometric shapes.    '
   },
   '011': {
     careerS: 'Developer',
-    link:'',
+    link:'https://www.geeksforgeeks.org/complete-roadmap-to-learn-dsa-from-scratch/',
     Desc: 'Being technically inclined, you ought to attempt development courses. You may create websites, apps, and other types of software.    '
   },
   '001': {
     careerS: 'Design',
-    link:'',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+    link:'https://en.m.wikipedia.org/wiki/Graphic_design',
+    Desc: 'You have the option to pursue a line of work in graphic design. You have the potential to creatively visualize color schemes, pattern combinations, and geometric shapes.    '
   },
-  '010': {
+  '010':  {
     careerS: 'Developer',
-    link:'',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+    link:'https://www.geeksforgeeks.org/complete-roadmap-to-learn-dsa-from-scratch/',
+    Desc: 'Being technically inclined, you ought to attempt development courses. You may create websites, apps, and other types of software.    '
   },
-  '100': {
-    careerS: 'Programing',
-    link:'',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+  '100':{
+    careerS: 'Programming',
+    link:'https://www.geeksforgeeks.org/complete-roadmap-to-learn-dsa-from-scratch/',
+    Desc: 'You possess a logical mind that can debug the algorithms to solve all programming issues and create error-free systems.    '
   },
   '000': {
     careerS: 'Inconfident',
