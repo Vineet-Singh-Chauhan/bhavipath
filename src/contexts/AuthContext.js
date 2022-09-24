@@ -2,7 +2,7 @@ import {createContext, useEffect, useReducer} from "react";
 import AuthReducer from "./AuthReducer";
 
 const INITIAL_STATE = {
-    currentUser:(localStorage.getItem("user").email)||null,
+    currentUser:(localStorage.getItem("user"))||null,
 };
 
 export const AuthContext = createContext(INITIAL_STATE)
