@@ -8,7 +8,7 @@ const DiscTest = () => {
                     The DISC personality Test
                 </div>
                 <div className='text-lg sm:text-xl text-white/50 '>
-                    A modern interpretation of Dr. William Marston's behavioral dimensions, this personal strengths profile uncovers four quadrants of behavioral patterns. With the insight from DISC, it will be easier for you to recognize the right opportunities to achieve the results you desire.
+                This DISC personality test is designed to check personality by calculating your personal profile based on your everyday typical behavior. It's quick and without any obligations. The DISC factors: Dominance, Influence, Steadiness and Compliance explain your behavior towards others and the everyday things you do.
                 </div>
             </div>
             <div data-aos="fade-zoom-in" className='flex-1'>

@@ -16,7 +16,7 @@ import { signupFields } from "../datasource/loginpageData"
 import Header from "../components/pages/login/Header"
 import Input from "../components/pages/login/Input";
 import FormAction from "../components/pages/login/FormAction";
-import FormExtra from "../components/pages/login/FormExtra";
+// import FormExtra from "../components/pages/login/FormExtra";
 import Footer from '../components/common/Footer';
 import Navbar from '../components/common/Navbar';
 
@@ -26,6 +26,7 @@ let fieldsState = {};
 fields.forEach(field => fieldsState[field.id] = '');
 
 export default function Signup() {
+    const navigate = useNavigate();
     const [signupState, setSignupState] = useState(fieldsState);
 
     const handleChange = (e) => setSignupState({ ...signupState, [e.target.id]: e.target.value });
@@ -44,7 +45,7 @@ export default function Signup() {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        swal("Registered !", "Please Login to continue", "success").then( <Navigate to="/login"/>);
+        swal("Registered !", "Please Login to continue", "success").then( navigate('/login'));
        
         
         // ...

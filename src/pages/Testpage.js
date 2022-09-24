@@ -22,34 +22,42 @@ import QuestionDiv from '../components/test/QuestionDiv';
 const reference = {
   '111': {
     careerS: 'Full Stack Developer',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+    link:'',
+    Desc: 'You have both the capacity to develop both client-side and server-side software. Consider choosing a profession as a full stack developer.'
   },
   '110': {
-    careerS: 'Programing',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+    careerS: 'Programming',
+    link:'',
+    Desc: 'You possess a logical mind that can debug the algorithms to solve all programming issues and create error-free systems.    '
   },
   '101': {
     careerS: 'Design',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+    link:'',
+    Desc: 'You have the option to pursue a line of work in graphic design. You have the potential to creatively visualize color schemes, pattern combinations, and geometric shapes.    '
   },
   '011': {
     careerS: 'Developer',
-    Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
+    link:'',
+    Desc: 'Being technically inclined, you ought to attempt development courses. You may create websites, apps, and other types of software.    '
   },
   '001': {
     careerS: 'Design',
+    link:'',
     Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
   },
   '010': {
     careerS: 'Developer',
+    link:'',
     Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
   },
   '100': {
     careerS: 'Programing',
+    link:'',
     Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
   },
   '000': {
     careerS: 'Inconfident',
+    link:'',
     Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
   },
 
@@ -75,6 +83,7 @@ const Testpage = () => {
 
       setCareer(reference[str].careerS);
       setCareerDesc(reference[str].Desc);
+      setLink(reference[str].link);
       document.getElementById("testRes").classList.remove('hidden');
       document.getElementById("testRes").classList.add('flex');
       e.target.parentElement.querySelector("form").reset();
@@ -86,13 +95,14 @@ const Testpage = () => {
   }
   const [career, setCareer] = useState('')
   const [careerDesc, setCareerDesc] = useState('')
+  const [link, setLink] = useState('')
 
   return (
     <div>
       <Navbar />
 
       <div data-aos="fade-zoom-in" className='text-white font-semibold text-4xl md:text-6xl text-center my-5'>
-        Trusted Carrier Suggestion
+        Trusted Career Suggestion
       </div>
       <div  data-aos="fade-zoom-in" className='text-white/50 text-xl md:text-2xl text-center my-10'>
         Know yourself better through Our test <br /> And choose you path accordingly
@@ -140,7 +150,7 @@ const Testpage = () => {
 
       <form data-aos="fade-zoom-in"  onSubmit={handletest} className="test relative items-center  bg-[#1f2937]/60 backdrop-blur-sm py-10 border-t-[0.5px] border-t-white/20 ">
 
-        <Modal career={career} desc={careerDesc} />
+        <Modal career={career} desc={careerDesc} link={link} />
         <h1 className='text-white font-semibold text-4xl text-center my-10 '>Questionaire</h1>
         <hr className='my-5 mx-10 border-white/20' />
 

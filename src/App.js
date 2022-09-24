@@ -6,7 +6,8 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Navigate
+  Navigate,
+  useNavigate
 } from "react-router-dom";
 
 
@@ -48,6 +49,7 @@ function App() {
   //context
   const {currentUser} = useContext(AuthContext)
   const RequireAuth = ({children})=>{
+    const navigate = useNavigate();
     return  currentUser ? children :<Navigate to="/login"/>;
   }
 

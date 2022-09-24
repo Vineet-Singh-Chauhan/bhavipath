@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <>
     <Navbar/>
-    <div className='flex justify-center items-center'>
+    <div className='flex justify-center items-center '>
         <Contactus/>
     </div>
     <Footer/>

@@ -17,7 +17,11 @@ function Guidance() {
                     careers.map(
                         e =>
                             <div data-aos="fade-zoom-in" key={e.id} className="justify-center flex">
+
+
                                 <Careercard link={e.link} subject={e.subject} startGrad={e.startGrad} endGrad={e.endGrad} content={e.content} />
+                                
+                                
                             </div>
 
                     )

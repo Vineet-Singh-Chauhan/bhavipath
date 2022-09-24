@@ -61,10 +61,10 @@ export default function Login() {
             .then((userCredential) => {
                 // Signed in 
                 const user1 = userCredential.user;
-                alert(user1)
+                // alert(user1)
                 const user = userCredential.user;
                 localStorage.setItem('user',user)
-                console.log(user.email)
+                // console.log(user.email)
                 dispatch({ type: "LOGIN", payload: user })
                 navigate("/test")
                 // ...

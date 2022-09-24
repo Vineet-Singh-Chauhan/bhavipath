@@ -44,18 +44,18 @@ const Contactus = () => {
   }
 
   return (
-    <form data-aos="fade-zoom-in" onSubmit={handleContact}>
-      <div className='my-5   relative flex items-center justify-center'>
-        <div className='  relative'>
-          <div className="flex justify-center items-center w-screen  bg-none text-white ">
+    <form data-aos="fade-zoom-in" onSubmit={handleContact} className="w-screen overflow-x-hidden">
+      <div className='my-5 relative flex items-center justify-center  '>
+        <div className=' relative'>
+          <div className="flex  items-center justify-center bg-none text-white w-screen mx-0">
 
-            <div className="container mx-auto my-4 px-4 lg:px-20">
+            <div className="my-4 px-4 lg:px-10  w-full mx-0">
 
               <div className="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
                 <div className="flex">
                   <h1 className="font-bold uppercase text-5xl bg-gradient-to-r from-[#CB356B] to-[#BD3F32] bg-clip-text text-transparent">Send us a <br /> message</h1>
                 </div>
-                <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+                <div className="grid grid-cols-1 gap-2 md:grid-cols-2 mt-5">
                   <input id="firstName" className="w-full   mt-2 p-3 rounded bg-[#3e3f3f]/50 text-white outline-none border-none focus:bg-[#3e3f3f]/70 "
                     type="text" placeholder="First Name*" />
                   <input id="lastName" className="w-full bg-none  mt-2 p-3 rounded bg-[#3e3f3f]/50 text-white outline-none border-none focus:bg-[#3e3f3f]/70 "
@@ -105,8 +105,8 @@ const Contactus = () => {
                   </div>
 
                   <div className="flex my-4 w-2/3 lg:w-1/2">
-                    <a href="https://instagram.com/bhavipath?igshid=YmMyMTA2M2Y=" target="_blank" rel="noreferrer" className="rounded-full bg-white h-8 w-8 inline-block mx-1 text-center pt-1">
-                    <i class="bi bi-instagram text-blue-800"></i>
+                    <a href="https://instagram.com/bhavipath?igshid=YmMyMTA2M2Y=" target="_blank" rel="noreferrer" className="rounded-full bg-white h-8 w-8 inline-block  text-center pt-1">
+                    <i className="bi bi-instagram text-blue-800"></i>
                     </a>
                     
                   </div>

@@ -16,7 +16,7 @@ function Engineering() {
             <Navbar/>
             <h1 className=" p-8 m-8 text-center mb-4 text-3xl font-extrabold  text-white md:text-5xl lg:text-6xl"><span className="text-transparent bg-clip-text bg-gradient-to-br from-pink-500 to-orange-400">Engineering</span></h1>
 
-            <div className='  grid gap-4 md:gap-6 grid-cols-1  md:grid-cols-2 grid-rows-2 md:grid-rows-2 my-10'>
+            <div className=' mx-2   grid gap-4 md:gap-6 grid-cols-1  md:grid-cols-2 grid-rows-2 md:grid-rows-2 my-10'>
             {
                     engineeringOpt.map(
                         e =>
