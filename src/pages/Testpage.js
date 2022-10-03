@@ -57,7 +57,7 @@ const reference = {
   },
   '000': {
     careerS: 'Inconfident',
-    link:'',
+    link:'https://www.youtube.com',
     Desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore illum adipisci rerum qui vitae ad ducimus. Tempora, maxime eligendi'
   },
 

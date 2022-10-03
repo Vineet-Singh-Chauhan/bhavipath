@@ -53,6 +53,7 @@ function App() {
     return  currentUser ? children :<Navigate to="/login"/>;
   }
 
+  // sessionStorage.clear();
 
   return (
     <div className="bg-gradient-to-b from-[#001039] #0109d1 via-[#189bff10] to-[#0109d120]">
