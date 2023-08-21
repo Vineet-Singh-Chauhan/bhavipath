@@ -79,8 +79,9 @@ const TestAPI = () => {
 
       // Endpoint to send files
       // url: "https://dummy.restapiexample.com/api/v1/create",
-      url: "https://api.sentino.org/score/facts",
+      url: "http://localhost:3000/testApi?",
       method: "POST",
+      mode: "cors",
       headers: {
 
         // Add any auth token here
@@ -94,7 +95,7 @@ const TestAPI = () => {
       data: JSON.stringify(inputjson),
     })// Handle the response from backend here
     axios({
-      url: "https://api.sentino.org/score/facts",
+      url: "http://localhost:3000/testApi?",
       method: "GET",
       headers: {
 
